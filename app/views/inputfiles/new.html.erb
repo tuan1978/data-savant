@@ -1,0 +1,20 @@
+<h1>Upload a file</h1>
+<p>Please select a file to upload</p>
+<%= form_for @inputfile do |form| %>
+    <p>
+      <%= form.label :title, "Give the file a name you can remember easily:" %>
+      <%= form.text_field :title %>
+    </p>
+    <p>
+      <%= form.label :uploaded_file, "Your contents:" %>
+      <%= form.file_field :uploaded_file %>
+    </p>
+    <% if @inputfile.errors[:filename].any? %>
+        <p class='error-messages'>
+          The given url <%= @inputfile.errors[:filename].to_sentence %>.
+        </p>
+    <% end %>
+    <p class='buttons'>
+      <%= form.submit "Create entry" %>
+    </p>
+<% end %>
