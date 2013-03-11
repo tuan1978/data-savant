@@ -7,6 +7,8 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 gem 'rake'
+gem 'rspec-rails', "~> 2.0"
+gem 'factory_girl_rails', "~> 4.1"
 
 
 # Gems used only for assets and not required
